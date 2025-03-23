@@ -1,0 +1,56 @@
+.header-cell {
+	padding: 10px 30px 10px 10px;
+	position: relative;
+	cursor: pointer;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: 12px;
+		border: 4px solid transparent;
+	}
+
+	&::before {
+		border-bottom-color: #bdbdbd;
+		margin-top: -8px;
+	}
+
+	&::after {
+		border-top-color: #bdbdbd;
+		margin-top: 1px;
+	}
+
+	&.sort-asc {
+		&::before {
+			border-width: 6px;
+			margin-top: -9px;
+			right: 10px;
+			border-bottom-color: #3f3f3f;
+		}
+
+		&::after {
+			content: none;
+		}
+	}
+
+	&.sort-desc {
+		&::before {
+			content: none;
+		}
+
+		&::after {
+			border-width: 6px;
+			margin-top: -2px;
+			right: 10px;
+			border-top-color: #3f3f3f;
+		}
+	}
+
+	div {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}

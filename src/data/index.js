@@ -23,4 +23,10 @@ export const data = [
 		profession: 'Backend',
 		age: 23,
 	},
+	{
+		id: 5,
+		name: 'Анна Круз',
+		profession: 'Backend',
+		age: 19,
+	},
 ];
